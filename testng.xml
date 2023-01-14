@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/MBB/workspace-IntelliJ/com.inar-academy-maven">
+        <classes>
+            <class name="hw_AutomationExercise.Test_07_VerifyTestCasesPage">
+                <methods>
+                    <include name="TestCases"/>
+                </methods>
+            </class>
+            <class name="hw_AutomationExercise.Test_08_VerifyAllProducts">
+                <methods>
+                    <include name="Products"/>
+                </methods>
+            </class>
+            <class name="hw_AutomationExercise.Test_09_SearchProduct">
+                <methods>
+                    <include name="SearchProduct"/>
+                </methods>
+            </class>
+            <class name="hw_AutomationExercise.Test_10_Subscription">
+                <methods>
+                    <include name="SearchProduct"/>
+                </methods>
+            </class>
+            <class name="hw_AutomationExercise.Test_11_SubscriptionInCartPage">
+                <methods>
+                    <include name="SearchProduct"/>
+                </methods>
+            </class>
+            <class name="hw_AutomationExercise.Test_12_AddProductsInCart">
+                <methods>
+                    <include name="SearchProduct"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
