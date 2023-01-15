@@ -54,6 +54,29 @@ public class ProductPage extends BasePage{
 
     @FindBy(tagName = "u")
     private WebElement viewCart;
+
+    @FindBy(xpath = "//h2[normalize-space()='Brands']")
+    public WebElement brandColumnText;
+
+    @FindBy(xpath = "//a[@href='/brand_products/Polo']")
+    private WebElement poloBrand;
+
+    @FindBy(xpath = "//a[@href='/brand_products/H&M']")
+    private WebElement hmBrand;
+
+    @FindBy(css = ".title.text-center")
+    private WebElement brandTitleText;
+
+    public String getBrandTitleText(){
+        return brandTitleText.getText();
+    }
+    public void clickHmBrand(){
+        hmBrand.click();
+    }
+    public void clickPoloBrand(){
+        poloBrand.click();
+    }
+
     public void clickViewCart(){
         viewCart.click();
     }

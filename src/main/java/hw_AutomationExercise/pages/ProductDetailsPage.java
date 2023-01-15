@@ -3,7 +3,7 @@ package hw_AutomationExercise.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class ProductDetailsPage extends BasePage{
+public class ProductDetailsPage extends BasePage {
     @FindBy(css = ".product-information")
     public WebElement productDetailsColumn;
 
@@ -15,16 +15,42 @@ public class ProductDetailsPage extends BasePage{
 
     @FindBy(tagName = "u")
     private WebElement viewCart;
+    @FindBy(css = "#name")
+    private WebElement nameForReview;
+    @FindBy(css = "#email")
+    private WebElement emailForReview;
+    @FindBy(css = "#review")
+    private WebElement review;
+    @FindBy(css = "#button-review")
+    private WebElement submitButtonForReview;
 
-    public void setQuantityOfProduct(String quantity){
+    @FindBy(css = "div[class='alert-success alert'] span")
+    public WebElement successReviewMessage;
+
+    public void setNameForReview(String text){
+        nameForReview.sendKeys(text);
+    }
+    public void setEmailForReview(String text){
+        emailForReview.sendKeys(text);
+    }
+    public void setReview(String text){
+        review.sendKeys(text);
+    }
+    public void clickSubmitButtonForReview(){
+        submitButtonForReview.click();
+    }
+
+
+    public void setQuantityOfProduct(String quantity) {
         quantityOfProduct.clear();
         quantityOfProduct.sendKeys(quantity);
     }
 
-    public void clickAddToCart(){
+    public void clickAddToCart() {
         addToCart.click();
     }
-    public void clickViewCart(){
+
+    public void clickViewCart() {
         viewCart.click();
     }
 }

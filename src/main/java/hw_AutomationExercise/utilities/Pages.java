@@ -14,6 +14,10 @@ public class Pages {
     private ProductPage productPage;
     private ProductDetailsPage productDetailsPage;
     private ViewCartPage viewCartPage;
+    private CheckoutPage checkoutPage;
+    private PaymentPage paymentPage;
+    private CategoryPage_1 categoryPage1;
+    private PaymentDonePage paymentDonePage;
 
     public Pages() {
         this.homePage = new HomePage();
@@ -26,7 +30,26 @@ public class Pages {
         this.productPage = new ProductPage();
         this.productDetailsPage = new ProductDetailsPage();
         this.viewCartPage = new ViewCartPage();
+        this.checkoutPage = new CheckoutPage();
+        this.paymentPage = new PaymentPage();
+        this.categoryPage1 = new CategoryPage_1();
+        this.paymentDonePage = new PaymentDonePage();
+    }
 
+    public PaymentDonePage getPaymentDonePage() {
+        return paymentDonePage;
+    }
+
+    public CategoryPage_1 getCategoryPage1() {
+        return categoryPage1;
+    }
+
+    public CheckoutPage getCheckoutPage() {
+        return checkoutPage;
+    }
+
+    public PaymentPage getPaymentPage() {
+        return paymentPage;
     }
 
     public ViewCartPage getViewCartPage() {

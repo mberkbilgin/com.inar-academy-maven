@@ -7,7 +7,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 public class BasePage {
@@ -30,5 +33,10 @@ public class BasePage {
         Actions a = new Actions(Driver.getDriver());
         a.moveToElement(element).build().perform();
 
+    }
+
+    public static void waitElement(WebElement element){
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.visibilityOf(element));
     }
 }

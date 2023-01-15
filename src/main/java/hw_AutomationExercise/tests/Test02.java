@@ -17,7 +17,7 @@ public class Test02 extends BaseTest {
         pages.getHomePage().clickSignupLoginButton();
 
         softAssert.assertEquals(pages.getLoginPage().getLoginMessage(),"Login to your account");
-        pages.getLoginPage().setLoginEmailAddress("jacks@sparrow.com");
+        pages.getLoginPage().setLoginEmailAddress("jack@sparrow.com");
         pages.getLoginPage().setLoginEmailPassword("123456");
         pages.getLoginPage().clickLoginButton();
 
