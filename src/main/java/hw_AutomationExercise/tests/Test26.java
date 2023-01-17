@@ -23,7 +23,7 @@ public class Test26 extends BaseTest {
         softAssert.assertTrue(pages.getHomePage().subscribeText.isDisplayed());
         BasePage.scrollDown("0","0");
         softAssert.assertTrue(pages.getHomePage().fullFledgedWebSiteMessage.isDisplayed());
-        
+
         softAssert.assertAll();
 
     }
